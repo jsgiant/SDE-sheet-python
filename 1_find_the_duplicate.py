@@ -1,22 +1,22 @@
 # Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.
 
-def find_the_duplicate(arr):
-    arr_len = len(arr)
-    if arr_len > 1:
+def findTheDuplicate(nums):
+    nums_len = len(nums)
+    if nums_len > 1:
         # Find the intersection point of the two runners.
-        slow = arr[0]
-        fast = arr[arr[0]]
+        slow = nums[0]
+        fast = nums[nums[0]]
         while True:
-            slow = arr[slow]
-            fast = arr[arr[fast]]
+            slow = nums[slow]
+            fast = nums[nums[fast]]
             if slow == fast:
                 break
         
         # Find the "entrance" to the cycle.
-        slow = arr[0]
+        slow = nums[0]
         while slow != fast:
-            slow = arr[slow]
-            fast = arr[fast]
+            slow = nums[slow]
+            fast = nums[fast]
 
         return slow
 

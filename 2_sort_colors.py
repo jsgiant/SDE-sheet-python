@@ -3,7 +3,7 @@
 
 # We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.
 
-def sort_colors(colors):
+def sortColors(colors):
     low,mid,high = 0,0,len(colors)-1
     while(mid < high):
         if colors[mid] == 0:
